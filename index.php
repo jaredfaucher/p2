@@ -17,9 +17,9 @@
 				$dictionary = file("dictionary.txt");  //http://www-01.sil.org/linguistics/wordlists/english/wordlist/wordsEn.txt
 				
 				// checks if the desired number of words for the password has been entered
-				// and checks if something besides int was entered into the form
+				// and checks if something besides an int was entered into the form
 				// defaults to 4 words if these requirements have not been met
-				if (!empty($_POST["numberOfWords"]))
+				if (!empty($_POST["numberOfWords"]) && ctype_digit($_POST["numberOfWords"]))
 				{
 					$numberOfWords = $_POST["numberOfWords"];
 				}
