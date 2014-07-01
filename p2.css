@@ -1,5 +1,6 @@
 .container{
 	text-align: center;
+	width: 600px;
 }
 .password{
 	font-size: 28px;
@@ -8,4 +9,7 @@
 }
 #numberOfWords{
 	width: 50px;
+}
+img{
+	width: 570px;
 }
