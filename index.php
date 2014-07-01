@@ -17,14 +17,13 @@
 				for ($i = 0; $i < 4; $i++)
 				{
 					${"word" . $i} = $dictionary[rand(1, 109583)];
+
 					print ${"word" . $i};
 					if ($i < 3)
 					{
 						print "-";
 					}
-				}
-
-				
+				}	
 			?>
 			</p>
 			<a href="http://xkcd.com/936/">
