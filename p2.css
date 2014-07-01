@@ -1,4 +1,11 @@
 .container{
 	text-align: center;
-	width: 960px;
+}
+.password{
+	font-size: 28px;
+	color: #FF0000;
+	background-color: #CCCCCC;
+}
+#numberOfWords{
+	width: 50px;
 }
