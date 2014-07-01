@@ -19,7 +19,7 @@
 				// checks if the desired number of words for the password has been entered
 				// and checks if something besides int was entered into the form
 				// defaults to 4 words if these requirements have not been met
-				if (!empty($_POST["numberOfWords"]) && is_int($_POST["numberOfWords"]))
+				if (!empty($_POST["numberOfWords"]))
 				{
 					$numberOfWords = $_POST["numberOfWords"];
 				}
@@ -63,7 +63,7 @@
 			<br>
 			<form method="post">
 				<label for="numberOfWords">Number of Words: </label>
-				<input maxlength="1" type="text" name="numberOfWords" id="numberOfWords" value>
+				<input maxlength="1" type="text" name="numberOfWords" id="numberOfWords">
 				(Max = 9)
 				<br>
 				<!-- The php inside of the input tags keeps the checkboxes checked upon reload of the page with new password -->
