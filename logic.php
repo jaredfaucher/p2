@@ -19,6 +19,7 @@
 	{
 		// pics random word from dictionary array (there are 109583 lines in my dictionary)
 		// and concatenates it with the $password string
+		// capitalizes if CamelCase is chosen
 		$newWord = $dictionary[rand(1, 109583)];
 		if ($_POST["separator"] == "camel")
 		{
@@ -29,6 +30,7 @@
 			$password = $password . $newWord;
 		}
 
+		// concatenates separators onto password unless at last word
 		if ($i < $numberOfWords - 1)
 		{
 			switch($_POST["separator"])
@@ -47,24 +49,22 @@
 			}
 		}
 	}
-	// adds number to the end if checkbox was checked
+	// modifies the password depending on what checkboxes are checked
 	if (!empty($_POST["number"]))	
 	{
 		$password = $password . rand(0, 9);
 	}
-	// adds $ symbol to the end if checkbox was checked
 	if (!empty($_POST["symbol"]))
 	{
 		$password = $password . "$";
 	}
-	// uppercases the first letter of first word if checkbox was checked
 	if (!empty($_POST["upperFirst"]))
 	{
 		$password = ucfirst($password);
 	}
 	// removes whitespace/spaces in string
-	// spaces are at the end of the line for most words in my dictionary
-	// which caused there to be spaces printed between words when my page displayed	
+	/* spaces are at the end of the line for most words in my dictionary
+	which caused there to be spaces printed between words when my page displayed */	
 	if ($_POST["separator"] != "space")
 	{
 		$password = preg_replace('/\s+/', '', $password);
