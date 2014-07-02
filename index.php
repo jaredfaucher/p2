@@ -17,7 +17,7 @@
 			<br>
 			<form method="post">
 				<label for="numberOfWords">Number of Words: </label>
-				<input maxlength="1" type="text" name="numberOfWords" id="numberOfWords" value= <?php echo "'" . htmlspecialchars($_POST['numberOfWords']) ."'"; ?> />
+				<input maxlength="1" type="text" name="numberOfWords" id="numberOfWords" value= <?= "'" . htmlspecialchars($_POST['numberOfWords']) ."'"; ?> />
 				(Max = 9)
 				<br>
 				<!-- The php inside of the input tags keeps the checkboxes checked upon reload of the page with new password -->
@@ -26,9 +26,9 @@
 				<input type="checkbox" name="upperFirst" <?php if(isset($_POST['upperFirst'])) echo "checked='checked'"; ?> >Uppercase first letter<br>
 				Choose your separator: 
 				<select name="separator">
-					<option value="hyphen">Hyphen</option>
-					<option value="space">Space</option>
-					<option value="camel">CamelCase</option>
+					<option value="hyphen" <?= $_POST['separator'] == "hyphen" ? ' selected="selected"' : '' ?> >Hyphen</option>
+					<option value="space" <?= $_POST['separator'] == "space" ? ' selected="selected"' : '' ?> >Space</option>
+					<option value="camel" <?= $_POST['separator'] == "camel" ? ' selected="selected"' : '' ?> >CamelCase</option>
 				</select>
 				<br>
 				<input type="submit" class="btn btn-default" value="Submit">
