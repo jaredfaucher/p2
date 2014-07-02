@@ -17,10 +17,10 @@
 			<br>
 			<form method="post">
 				<label for="numberOfWords">Number of Words: </label>
+				<!-- The php inside of the input tags keeps the form filled upon reload of the page with new password -->
 				<input maxlength="1" type="text" name="numberOfWords" id="numberOfWords" value= <?= "'" . htmlspecialchars($_POST['numberOfWords']) ."'"; ?> />
 				(Max = 9)
 				<br>
-				<!-- The php inside of the input tags keeps the checkboxes checked upon reload of the page with new password -->
 				<input type="checkbox" name="number" <?php if(isset($_POST['number'])) echo "checked='checked'"; ?> >Include Number<br>
 				<input type="checkbox" name="symbol" <?php if(isset($_POST['symbol'])) echo "checked='checked'"; ?> >Include Symbol<br>
 				<input type="checkbox" name="upperFirst" <?php if(isset($_POST['upperFirst'])) echo "checked='checked'"; ?> >Uppercase first letter<br>
