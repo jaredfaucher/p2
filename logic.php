@@ -35,14 +35,15 @@
 		{
 			switch($_POST["separator"])
 			{
-				case "hyphen": 
-					$password = $password . "-";
-					break;
+				 
+					//$password = $password . "-";
+					//break;
 				case "space":
 					$password = $password . " ";
 					break;
 				case "camel": 					
 					break;
+				case "hyphen":
 				default:
 					$password = $password . "-";
 					break;
