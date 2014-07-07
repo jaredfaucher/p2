@@ -24,10 +24,10 @@
 		and concatenates it with the $password string 
 		*/
 		// capitalizes if CamelCase is chosen
-		$newWord = $dictionary[rand(0, 2125)];
+		$newWord = trim($dictionary[rand(0, 2125)]);
 		
 		/* This expression was used with my original dictionary before I created the word scraper.  There were 109583 lines in that dictionary.
-		$newWord = $dictionary[rand(0, 109582)]*/
+		$newWord = trim($dictionary[rand(0, 109582)])*/
 		
 		if ($_POST["separator"] == "camel")
 		{
@@ -70,12 +70,5 @@
 	if (!empty($_POST["upperFirst"]))
 	{
 		$password = ucfirst($password);
-	}
-	// removes whitespace/spaces in string
-	/* spaces are at the end of the line for most words in my dictionary
-	which caused there to be spaces printed between words when my page displayed */	
-	if ($_POST["separator"] != "space")
-	{
-		$password = preg_replace('/\s+/', '', $password);
 	}
 ?>

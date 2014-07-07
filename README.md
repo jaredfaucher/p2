@@ -12,6 +12,8 @@ My project is an xkcd style password generator which have a few interesting feat
 
 Originally I used a word list I found online at the link below to generate my password.  Eventually I created scrape.php to scrape and generate a word list from the website provided in the Word Scraper Hint document.  I still included the code for my original dictionary but have commented it out in logic.php.
 
+Due to the addition of the word scraper that has to make several http requests to scrape all 15 pages from www.paulnoll.com, please allow 10-30 seconds for the page to load!  Page works instantaneously when not scraping another website for words.
+
 ## Plugics/Libraries/Etc:
 
 	- Bootstrap: http://getbootstrap.com/

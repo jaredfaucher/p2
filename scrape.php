@@ -45,11 +45,13 @@
 			$counter++;
 		}
 	}
-	/* These lines were for debugging purposes to see if $dictiory
-	   was successful made. 
+	/*These lines were for debugging purposes to see if $dictiory
+	   was successful made.
 
 	echo '<pre>';
 	print_r($dictionary);
 	echo '</pre>';
+	echo ucfirst(trim($dictionary[0]));
 	*/
+
 ?>
