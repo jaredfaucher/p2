@@ -3,7 +3,7 @@
 	// http://www.paulnoll.com/Books/Clear-English/words-01-02-hundred.html
 	$address_pre = "http://www.paulnoll.com/Books/Clear-English/words-";
 	$address_pos = "-hundred.html";
-	for ($i = 1, $j = $i + 1; $i < 3; $i = $i + 2)
+	for ($i = 1, $j = $i + 1, $k = 0; $i < 30; $i = $i + 2, $j = $j + 2, $k++)
 	{
 		if ($i < 10)
 		{
@@ -25,13 +25,22 @@
 		
 		$address = $address_pre . $beg . '-' . $end . $address_pos;
 		
-		//echo $address;
+		echo $address;
 		$page = file_get_contents($address);
-		//echo $page;
-		preg_match_all("/<li>(.*?)<\/li>/s", $page, $out);
-
-		echo '<pre>';
-		print_r($out[0][0]);
-		echo '</pre>';
+		preg_match_all("/<li>(.*?)<\/li>/s", $page, ${"out" . $k});
 	}
+
+	$counter = 0;
+	for ($k = 0; $k < 15; $k++)
+	{
+		$array = ${"out" . $k}[0];
+		foreach ($array as $word)
+		{
+			$dictionary[$counter] = $word;
+			$counter++;
+		}
+	}
+	echo '<pre>';
+	print_r($dictionary);
+	echo '</pre>';
 ?>
