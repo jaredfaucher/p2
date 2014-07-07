@@ -4,6 +4,7 @@
 		<title>Jared Faucher ::: P2 ::: xkcd Password Generator</title>
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="p2.css">
+		<?php require 'scrape.php'; ?>
 		<?php require 'logic.php'; ?>
 	</head>
 	<body>

@@ -1,10 +1,13 @@
 <?php
 
+	// NO LONGER NEEDED DUE TO CREATION OF WORD SCRAPER
 	// reads dictionary file into array to access words separately
-	$dictionary = file("dictionary.txt");  //http://www-01.sil.org/linguistics/wordlists/english/wordlist/wordsEn.txt
+	// $dictionary = file("dictionary.txt");  
+	// source: http://www-01.sil.org/linguistics/wordlists/english/wordlist/wordsEn.txt
 				
-	// checks if the desired number of words for the password has been entered
-	// and checks if something besides an int was entered into the form
+	/* checks if the desired number of words for the password has been entered
+	   and checks if something besides an int was entered into the form
+	*/
 	// defaults to 4 words if these requirements have not been met
 	if (!empty($_POST["numberOfWords"]) && ctype_digit($_POST["numberOfWords"]))
 	{
@@ -17,10 +20,15 @@
 	// loop executes depending on the number of words chosen
 	for ($i = 0; $i < $numberOfWords; $i++)
 	{
-		// pics random word from dictionary array (there are 109583 lines in my dictionary)
-		// and concatenates it with the $password string
+		/* picks random word from dictionary array (there are 2126 lines in the scraped dictionary)
+		and concatenates it with the $password string 
+		*/
 		// capitalizes if CamelCase is chosen
-		$newWord = $dictionary[rand(1, 109583)];
+		$newWord = $dictionary[rand(0, 2125)];
+		
+		/* This expression was used with my original dictionary before I created the word scraper.  There were 109583 lines in that dictionary.
+		$newWord = $dictionary[rand(0, 109582)]*/
+		
 		if ($_POST["separator"] == "camel")
 		{
 			$password = $password . ucfirst($newWord);

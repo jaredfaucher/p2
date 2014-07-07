@@ -10,11 +10,12 @@ My project is an xkcd style password generator which have a few interesting feat
 
 ## Details:
 
-There are no details the instructor needs to know to run this application.
+Originally I used a word list I found online at the link below to generate my password.  Eventually I created scrape.php to scrape and generate a word list from the website provided in the Word Scraper Hint document.  I still included the code for my original dictionary but have commented it out in logic.php.
 
 ## Plugics/Libraries/Etc:
 
 	- Bootstrap: http://getbootstrap.com/
-	- Word List: http://www-01.sil.org/linguistics/wordlists/english/wordlist/wordsEn.txt
+	- Original Word List: http://www-01.sil.org/linguistics/wordlists/english/wordlist/wordsEn.txt
+	- Scraped Word List: http://www.paulnoll.com/Books/Clear-English/
 
-The only outside sources I used directly for this project was Bootstrap v3.1.1 and a word list I found on Google.  I also used Google and Stack Overflow to find out how to do certain things (e.g. testing that the input to "Number of Words" was an integer") but I did not copy any code directly, just adapted it.
+The only outside sources I used directly for this project was Bootstrap v3.1.1 and a word list I found on Google.  I also used Google and Stack Overflow to find out how to do certain things (e.g. testing that the input to "Number of Words" was an integer") but I did not copy any code directly, just adapted it for my purposes.
