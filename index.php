@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Jared Faucher ::: P2 ::: xkcd Password Generator</title>
+		<meta charset='utf-8'>
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="p2.css">
 		<?php require 'scrape.php'; ?>
@@ -36,7 +37,7 @@
 			</form>
 			<br>
 			<a href="http://xkcd.com/936/">
-				<img src="http://imgs.xkcd.com/comics/password_strength.png" />
+				<img alt="xkcd style passwords" src="http://imgs.xkcd.com/comics/password_strength.png" />
 			</a>
 			<?php require "scrape.php" ?>
 		</div>
